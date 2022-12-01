@@ -39,6 +39,13 @@ def main2():
         max.append(mval)
         count += 1
     print(sum(max))
+
+def check():
+    inf = 'd1.in'
+    ll = [[int(y) for y in x.split("\n")] for x in open(inf).read().strip().split('\n\n')]
+    print(max([sum(x) for x in ll]))
+    print(sum(sorted([sum(x) for x in ll])[-3:]))
 if __name__ == "__main__":
     main1()
     main2()
+    check()
