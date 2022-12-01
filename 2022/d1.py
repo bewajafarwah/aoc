@@ -15,14 +15,14 @@ def readContents(fileName):
     return elf
 
 
-def main():
+def main1():
     fileName = 'd1.in'
     elf = readContents(fileName)
     max = -1
     for e in elf:
         if sum(e) > max:
             max = sum(e)
-    print(sum(max))
+    print(max)
 
 def main2():
     fileName = 'd1.in'
@@ -35,10 +35,10 @@ def main2():
         mval = -1
         for e in elf:
             if mval < sum(e) and sum(e) not in max:
-                print(count, mval, sum(e))
                 mval = sum(e)
         max.append(mval)
         count += 1
     print(sum(max))
 if __name__ == "__main__":
+    main1()
     main2()
